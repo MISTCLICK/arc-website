@@ -1,0 +1,88 @@
+---
+interface Props {
+  sizing: string;
+  hoverEffect?: boolean;
+  hoverRotate?: boolean;
+  className?: string;
+}
+
+const {
+  sizing,
+  className,
+  hoverEffect = true,
+  hoverRotate = false,
+} = Astro.props;
+---
+
+<div
+  class="h-fit p-px *:after:hidden! hexagon-parent"
+  class:list={[
+    {
+      "hover:*:scale-97": hoverEffect && !hoverRotate,
+      "hover:*:rotate-y-180 *:duration-300 *:after:inline-block!": hoverRotate,
+    },
+    className,
+  ]}
+>
+  <div
+    class="relative text-white overflow-hidden aspect-7/6 md:aspect-6/7 p-5 grid justify-center content-center transition-transform hexagon"
+    class:list={[sizing]}
+  >
+    <slot />
+  </div>
+</div>
+
+<style lang="scss">
+  @media (width >= 48rem) {
+    .hexagon {
+      clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    }
+  }
+  @media (width < 48rem) {
+    .hexagon {
+      clip-path: polygon(25% 0%, 0% 50%, 25% 100%, 75% 100%, 100% 50%, 75% 0%);
+    }
+  }
+
+  .hexagon {
+    transform-style: preserve-3d;
+  }
+
+  .hexagon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    background-color: var(--color-primary);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  .hexagon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url(/favicon.ico);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: z-index 0ms 110ms;
+  }
+
+  .hexagon-parent:hover > .hexagon::after {
+    z-index: 0;
+  }
+</style>

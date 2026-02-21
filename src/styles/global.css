@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "@fontsource/Geist";
+
+@theme {
+  --color-primary: #004785;
+
+  --font-sans: "Geist", "sans-serif";
+  --font-serif: "Multicolore Pro", "serif";
+}
+
+@font-face {
+  font-family: "Multicolore Pro";
+  src: url("/fonts/Multicolore_Pro.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-arc {
+  font-family: "Multicolore Pro", serif;
+}

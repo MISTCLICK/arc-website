@@ -1,11 +1,233 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Base from "@layouts/BaseLayout.astro";
+import Hexagon from "@components/Hexagon.astro";
+
+import Logo from "@assets/Logo_white_text.png";
+
+const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Base>
+  <header
+    class="h-dvh flex md:flex-col justify-center items-center overflow-x-hidden"
+  >
+    <div
+      class="grid md:grid-flow-col md:translate-y-2/4 max-md:translate-x-2/4"
+    >
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-20"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-60"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-70"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-80"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-70"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-60"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-20"
+        hoverEffect={false}
+      />
+    </div>
+    <div
+      class="grid md:grid-flow-col md:translate-y-1/4 max-md:translate-x-1/4"
+    >
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+    </div>
+    <nav class="flex flex-col md:flex-row md:items-center">
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-80"
+        hoverEffect={false}
+      />
+      <a href="/about">
+        <Hexagon sizing={hexagonSizing}>
+          <span class="font-serif text-xs md:text-lg lg:text-xl xl:text-2xl">
+            About
+          </span>
+        </Hexagon>
+      </a>
+      <a href="/contact">
+        <Hexagon sizing={hexagonSizing}>
+          <span class="font-serif text-xs md:text-lg lg:text-xl xl:text-2xl">
+            Contact
+          </span>
+        </Hexagon>
+      </a>
+      <Hexagon sizing={hexagonSizing}>
+        {
+          !!import.meta.env.PUBLIC_JOIN_LINK ? (
+            <a href={import.meta.env.PUBLIC_JOIN_LINK}>
+              <div
+                class:list={[
+                  "*:my-2 hover:[&>div]:opacity-100 hover:[&>img]:translate-y-0",
+                ]}
+              >
+                <Image
+                  src={Logo}
+                  alt="The Als Rocketry Club"
+                  class="transition-transform max-md:translate-y-2/3 md:translate-y-3/4 lg:translate-y-2/3 xl:translate-y-1/2"
+                  loading="eager"
+                />
+                <div class="transition-opacity delay-[200ms_0ms] opacity-0">
+                  <hr class="pb-2" />
+                  <p class="font-serif text-center text-xs md:text-lg lg:text-xl xl:text-2xl">
+                    JOIN US
+                  </p>
+                </div>
+              </div>
+            </a>
+          ) : (
+            <Image src={Logo} alt="The Als Rocketry Club" loading="eager" />
+          )
+        }
+      </Hexagon>
+      <a href="/team">
+        <Hexagon sizing={hexagonSizing}>
+          <span class="font-serif text-xs md:text-lg lg:text-xl xl:text-2xl">
+            Team
+          </span>
+        </Hexagon>
+      </a>
+      <a href="/sponsors">
+        <Hexagon sizing={hexagonSizing}>
+          <span class="font-serif text-xs md:text-lg lg:text-xl xl:text-2xl">
+            Sponsors
+          </span>
+        </Hexagon>
+      </a>
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-80"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+    </nav>
+    <div
+      class="grid md:grid-flow-col md:-translate-y-1/4 max-md:-translate-x-1/4"
+    >
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon sizing={hexagonSizing} hoverRotate />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+    </div>
+    <div
+      class="grid md:grid-flow-col md:-translate-y-2/4 max-md:-translate-x-2/4"
+    >
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-20"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-60"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-70"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-80"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-70"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-60"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-40"
+        hoverEffect={false}
+      />
+      <Hexagon
+        sizing={hexagonSizing}
+        className="scale-20"
+        hoverEffect={false}
+      />
+    </div>
+  </header>
+</Base>

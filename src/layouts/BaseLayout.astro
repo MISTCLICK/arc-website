@@ -1,0 +1,38 @@
+---
+import { ClientRouter } from "astro:transitions";
+import "@styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="robots" content="/robots.txt" />
+    <meta name="author" content="Arina Vasiļjeva" />
+    <meta name="creator" content="Arina Vasiļjeva" />
+    <meta name="creator" content="The Als Rocketry Club" />
+    <meta name="publisher" content="The Als Rocketry Club" />
+    <meta name="theme-color" content="#004785" />
+    <ClientRouter />
+    <title>The Als Rocketry Club</title>
+    <meta
+      name="description"
+      content="The coolest rocketry club in Denmark. Join Us."
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

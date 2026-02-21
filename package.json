@@ -1,7 +1,7 @@
 {
-  "name": "website",
+  "name": "the-arc-website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.17.1"
+    "@astrojs/ts-plugin": "^1.10.6",
+    "@fontsource/geist": "^5.2.8",
+    "@tailwindcss/vite": "^4.2.0",
+    "astro": "^5.17.1",
+    "scss": "^0.2.4",
+    "tailwindcss": "^4.2.0"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.97.3"
   }
 }
