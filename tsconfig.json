@@ -16,16 +16,16 @@
     ],
     "paths": {
       "@styles*": [
-        "./src/styles/*"
+        "./src/styles*"
       ],
       "@assets*": [
-        "./src/assets/*"
+        "./src/assets*"
       ],
       "@layouts*": [
-        "./src/layouts/*"
+        "./src/layouts*"
       ],
       "@components*": [
-        "./src/components/*"
+        "./src/components*"
       ]
     },
     "jsx": "react-jsx",
