@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 
 import Base from "@layouts/BaseLayout.astro";
 import Hexagon from "@components/Hexagon.astro";
+import Footer from "@components/Footer.astro";
 
 import Logo from "@assets/Logo_white_text.png";
 
@@ -11,7 +12,7 @@ const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60";
 
 <Base>
   <header
-    class="h-dvh flex md:flex-col justify-center items-center overflow-x-hidden"
+    class="md:h-dvh flex md:flex-col justify-center items-center overflow-hidden"
   >
     <div
       class="grid md:grid-flow-col md:translate-y-2/4 max-md:translate-x-2/4"
@@ -134,7 +135,7 @@ const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60";
       <span id="appear-zoom" data-delay="0.3">
         <a href="/about">
           <Hexagon sizing={hexagonSizing}>
-            <span class="font-serif text-xs md:text-lg lg:text-xl xl:text-2xl">
+            <span class="font-arc text-xs md:text-lg lg:text-xl xl:text-2xl">
               About
             </span>
           </Hexagon>
@@ -143,7 +144,7 @@ const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60";
       <span id="appear-zoom" data-delay="0.2">
         <a href="/contact">
           <Hexagon sizing={hexagonSizing}>
-            <span class="font-serif text-xs md:text-lg lg:text-xl xl:text-2xl">
+            <span class="font-arc text-xs md:text-lg lg:text-xl xl:text-2xl">
               Contact
             </span>
           </Hexagon>
@@ -166,7 +167,7 @@ const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60";
                 />
                 <div class="transition-opacity delay-[200ms_0ms] opacity-0">
                   <hr class="pb-2" />
-                  <p class="font-serif text-center text-xs md:text-lg lg:text-xl xl:text-2xl">
+                  <p class="font-arc text-center text-xs md:text-lg lg:text-xl xl:text-2xl">
                     JOIN US
                   </p>
                 </div>
@@ -180,7 +181,7 @@ const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60";
       <span id="appear-zoom" data-delay="0.2">
         <a href="/team">
           <Hexagon sizing={hexagonSizing}>
-            <span class="font-serif text-xs md:text-lg lg:text-xl xl:text-2xl">
+            <span class="font-arc text-xs md:text-lg lg:text-xl xl:text-2xl">
               Team
             </span>
           </Hexagon>
@@ -189,7 +190,7 @@ const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60";
       <span id="appear-zoom" data-delay="0.3">
         <a href="/sponsors">
           <Hexagon sizing={hexagonSizing}>
-            <span class="font-serif text-xs md:text-lg lg:text-xl xl:text-2xl">
+            <span class="font-arc text-xs md:text-lg lg:text-xl xl:text-2xl">
               Sponsors
             </span>
           </Hexagon>
@@ -314,6 +315,8 @@ const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60";
       </span>
     </div>
   </header>
+  <main></main>
+  <Footer />
 </Base>
 
 <script>

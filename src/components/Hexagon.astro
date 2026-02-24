@@ -1,13 +1,13 @@
 ---
 interface Props {
-  sizing: string;
+  sizing?: string;
   hoverEffect?: boolean;
   hoverRotate?: boolean;
   className?: string;
 }
 
 const {
-  sizing,
+  sizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60",
   className,
   hoverEffect = true,
   hoverRotate = false,
@@ -42,6 +42,17 @@ const {
     .hexagon {
       clip-path: polygon(25% 0%, 0% 50%, 25% 100%, 75% 100%, 100% 50%, 75% 0%);
     }
+  }
+
+  .hexagon-no-turn {
+    clip-path: polygon(
+      0% 25%,
+      0% 75%,
+      50% 100%,
+      100% 75%,
+      100% 25%,
+      50% 0%
+    ) !important;
   }
 
   .hexagon {

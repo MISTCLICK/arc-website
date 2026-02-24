@@ -1,0 +1,29 @@
+---
+import Hexagon from "@components/Hexagon.astro";
+
+const hexagonSizing = "w-30 sm:w-35 lg:w-40 xl:w-50 2xl:w-60 hexagon-no-turn";
+---
+
+<footer class="relative mt-35 text-white">
+  <div
+    class="absolute top-0 -translate-y-1/4 -z-1 flex *:p-0 overflow-x-hidden"
+  >
+    <Hexagon hoverEffect={false} sizing={hexagonSizing} />
+    <Hexagon hoverEffect={false} sizing={hexagonSizing} />
+    <Hexagon hoverEffect={false} sizing={hexagonSizing} />
+    <Hexagon hoverEffect={false} sizing={hexagonSizing} />
+    <Hexagon hoverEffect={false} sizing={hexagonSizing} />
+    <Hexagon hoverEffect={false} sizing={hexagonSizing} />
+    <Hexagon hoverEffect={false} sizing={hexagonSizing} />
+    <Hexagon hoverEffect={false} sizing={hexagonSizing} />
+  </div>
+  <div
+    class="w-full bg-primary h-50 z-1 p-6 flex gap-4 justify-between items-center flex-wrap *:flex-1"
+  >
+    <div>
+      <h2 class="font-serif">The Als Rocketry Club</h2>
+      <p>CVR {Math.floor(Math.random() * 1000000) + 100000}</p>
+    </div>
+    <div>Sosumi.</div>
+  </div>
+</footer>
