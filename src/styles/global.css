@@ -5,17 +5,17 @@
   --color-primary: #004785;
 
   --font-sans: "Geist", "sans-serif";
-  --font-serif: "Multicolore", "serif";
+  --font-serif: "Multicolore Pro", "serif";
 }
 
 @font-face {
-  font-family: "Multicolore";
-  src: url("/fonts/Multicolore_Pro.otf") format("otf");
+  font-family: "Multicolore Pro";
+  src: local("Multicolore Pro") url("/fonts/Multicolore_Pro.otf") format("otf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 .font-arc {
-  font-family: "Multicolore", serif;
+  font-family: "Multicolore Pro", serif;
 }
