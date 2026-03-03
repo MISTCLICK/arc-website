@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@fontsource/geist";
-@import url("https://fonts.cdnfonts.com/css/multicolore-pro");
+/* @import url("https://fonts.cdnfonts.com/css/multicolore-pro"); */
 
 @theme {
   --color-primary: #004785;
@@ -9,14 +9,14 @@
   --font-serif: "Multicolore Pro", "serif";
 }
 
-/* @font-face {
+@font-face {
   font-family: "Multicolore Pro";
   src: local("Multicolore Pro") url("/fonts/Multicolore_Pro.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-} */
+}
 
 .font-arc {
   font-family: "Multicolore Pro", serif;
