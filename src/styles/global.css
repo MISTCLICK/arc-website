@@ -11,8 +11,7 @@
 
 @font-face {
   font-family: "Multicolore Pro";
-  src: local("Multicolore Pro") url("/fonts/Multicolore_Pro.woff")
-    format("woff");
+  src: url("/fonts/Multicolore_Pro.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
